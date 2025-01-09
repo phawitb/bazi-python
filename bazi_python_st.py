@@ -141,6 +141,7 @@ def calculate_four_pillars_luck_pillars_ten_gods(birth_date):
 
 # Streamlit App
 st.title("Bazi Application")
+st.write("https://github.com/phawitb/bazi-python.git")
 
 # Input section
 st.header("Enter Your Birth Details")
@@ -148,7 +149,7 @@ st.header("Enter Your Birth Details")
 birth_date = st.date_input("Birth Date")
 birth_time = st.time_input("Birth Time")
 
-if st.button("Calculate Four Pillars"):
+if st.button("Calculate"):
     try:
         birth_datetime = datetime.combine(birth_date, birth_time)
         result = calculate_four_pillars_luck_pillars_ten_gods(birth_datetime)
